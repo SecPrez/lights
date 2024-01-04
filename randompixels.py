@@ -17,7 +17,7 @@ class RandomPixels(LightBase):
         
     @property
     def name(self):
-        "Random"
+       return "Random"
     
     @property
     def tick_interval(self):
