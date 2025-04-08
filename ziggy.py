@@ -1,14 +1,14 @@
 from base import LightBase
 import colors
 
-class OneByOne(LightBase):
+class Ziggy(LightBase):
     def __init__(self) -> None:
         self.indexes = {}
         self.directions = {}
       
     @property
     def name(self):
-        return "OneByOne"
+        return "Ziggy"
     
     @property
     def tick_interval(self):
@@ -20,10 +20,9 @@ class OneByOne(LightBase):
         for x in range(0,10):
             pixels[self.get_index(x, max)] = colors.BLUE
         for x in range(10,20):
-            pixels[self.get_index(x, max)] = colors.WHITE
+            pixels[self.get_index(x, max)] = colors.GREEN
         
-        for x in range(20,30):
-            pixels[self.get_index(x, max)] = colors.RED1
+       
         
        
 

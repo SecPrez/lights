@@ -1,29 +1,23 @@
 from base import LightBase
 import colors
 
-class OneByOne(LightBase):
-    def __init__(self) -> None:
-        self.indexes = {}
-        self.directions = {}
+class Single(LightBase):
+    def __init__(self, index) -> None:
+        self.index = index
+      
       
     @property
     def name(self):
-        return "OneByOne"
+        return "Single"
     
     @property
     def tick_interval(self):
-        return 0.0000
+        return 0
 
     def tick(self, pixels, max):
         pixels.fill((0, 0, 0))
+        pixels[self.index] = colors.RED1
         
-        for x in range(0,10):
-            pixels[self.get_index(x, max)] = colors.BLUE
-        for x in range(10,20):
-            pixels[self.get_index(x, max)] = colors.WHITE
-        
-        for x in range(20,30):
-            pixels[self.get_index(x, max)] = colors.RED1
         
        
 
